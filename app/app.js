@@ -40,8 +40,9 @@ app.run = function(config){
     app.use(express.errorHandler()); 
   });
 
-  app.get('/' , routes.index);
+  routes(app);
   // Listen
+
   http.createServer(app).listen(config.port, function(){
     config.logger.http("Express server listening on port " + config.port + " in " + app.settings.env + " mode");
   });
