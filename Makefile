@@ -17,6 +17,6 @@ spec:
 			--reporter $(MOCHA_REPORTER) \
 			--slow 50 \
 			--growl \
-			$(UNIT_TESTS)
+			test/initTests.js $(UNIT_TESTS)
 
-.PHONY: spec cucumber
+.PHONY: spec

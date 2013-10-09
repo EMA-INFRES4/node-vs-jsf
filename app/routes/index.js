@@ -1,8 +1,8 @@
-
-/*
- * GET home page.
- */
-
-exports.index = function(req, res){
-  res.render('index.hjs', { title: 'Express' });
-};
+var router = module.exports = function(app){
+  var routes = [
+    'Etudiant'
+  ];
+  routes.forEach(function(route) {
+    module.exports[route] = require('./' + route)(app);
+  });
+}

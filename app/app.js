@@ -22,7 +22,7 @@ app.run = function(config){
   app.configure(function(){
     app.set('views', __dirname + '/views');
     app.set('view engine', 'html')
-    app.set('layout', 'layouts/index');
+    app.set('layout', 'layouts/layout');
     //app.enable('view cache');
     app.engine('html', require('hogan-express'));
 
@@ -40,8 +40,9 @@ app.run = function(config){
     app.use(express.errorHandler()); 
   });
 
-  app.get('/' , routes.index);
+  routes(app);
   // Listen
+
   http.createServer(app).listen(config.port, function(){
     config.logger.http("Express server listening on port " + config.port + " in " + app.settings.env + " mode");
   });

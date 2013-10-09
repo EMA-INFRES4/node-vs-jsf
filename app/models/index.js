@@ -1,6 +1,7 @@
 var Sequelize = require('sequelize');
 var dbconfig  = require('../../config/config.json');
 
+console.log('ICICICICICIC');
 var node_env = process.env.NODE_ENV || 'development';
 
 // initialize database connection
