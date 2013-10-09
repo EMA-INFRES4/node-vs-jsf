@@ -22,7 +22,7 @@ app.run = function(config){
   app.configure(function(){
     app.set('views', __dirname + '/views');
     app.set('view engine', 'html')
-    app.set('layout', 'layouts/index');
+    app.set('layout', 'layouts/layout');
     //app.enable('view cache');
     app.engine('html', require('hogan-express'));
 
