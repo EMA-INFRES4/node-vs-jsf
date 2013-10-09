@@ -53,5 +53,17 @@ describe("Features", function(){
     });
   });
 
+  it("should delete a user", function(done){
+    zombie.visit('/', function(err, browser, status){
+      if(err) done(err);
+      var nbFirst = parseInt(browser.document.getElementById('count-students').innerHTML);
+      zombie.visit('/1/delete', function(err, browser, status){
+        if(err) done(err);
+          var nbLast = parseInt(browser.document.getElementById('count-students').innerHTML);
+          nbLast.should.equal(nbFirst - 1);
+          done();
+      });
+    });
+  });
 
 });

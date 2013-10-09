@@ -19,4 +19,4 @@ spec:
 			--growl \
 			test/initTests.js $(UNIT_TESTS)
 
-.PHONY: spec cucumber
+.PHONY: spec

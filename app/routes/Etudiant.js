@@ -43,4 +43,11 @@ var Public = module.exports = function(app){
       }
     });
   });
+  app.get('/:id/delete' , function(req , res){
+    Etudiant.find({where:{id:req.params.id}}).success(function(etudiant){
+      etudiant.destroy().success(function(){
+        res.redirect('/');
+      });
+    });
+  });
 };

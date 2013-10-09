@@ -24,4 +24,11 @@ describe("Routes", function(){
       done();
     });
   });
+  it("should be served at /8/delete", function(done){
+    zombie.visit('/8/delete', function(err, browser, status){
+      if(err) done(err);
+      status.should.equal(200);
+      done();
+    });
+  });
 });
