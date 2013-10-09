@@ -9,7 +9,7 @@ run:
 
 spec:
 	clear
-		@NODE_ENV=test sequelize -m
+		@NODE_ENV=test ./node_modules/.bin/sequelize -m
 		@NODE_ENV=test ./node_modules/.bin/mocha \
 			--require should \
 			--require sinon \
