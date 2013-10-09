@@ -15,7 +15,38 @@ git clone https://github.com/EMA-INFRES4/node-vs-jsf.git
 cd node-vs-jsf
 npm install
 ```
+Then, you should edit the configuration by editing the file "config/config.json" (there is a sample in config/config-default.json).
+
+```
+{
+    "development": {
+        "username": "root",
+        "password": "root",
+        "database": "node-vs-jsf_development",
+        "host": "127.0.0.1"
+    },
+    "test": {
+        "username": "root",
+        "password": "root",
+        "database": "node-vs-jsf_test",
+        "host": "127.0.0.1"
+    },
+    "production": {
+        "username": "root",
+        "password": "root",
+        "database": "node-vs-jsf_production",
+        "host": "127.0.0.1"
+    }
+}
+```
+
+
+Next, create the 3 databases.
+
+
 ## Run tests
+Units tests are using [mocha](http://visionmedia.github.io/mocha/) and [zombi](http://zombie.labnotes.org/)
+
 ```
 make spec
 ```
@@ -24,6 +55,9 @@ make spec
 ```
 make run
 ```
+[http://localhost:3000/](http://localhost:3000/)
+
+
 
 ## License
 
